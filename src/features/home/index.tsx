@@ -1,3 +1,9 @@
+import OngoingTripContent from "./components/ongoingTripContent";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <OngoingTripContent />
+    </div>
+  );
 }

@@ -1,3 +1,10 @@
+import Layout from "@/Layout";
+import Home from ".";
+
 export default function HomePage() {
-  return <div></div>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }

@@ -1,5 +1,5 @@
-import Layout from "@/Layout";
+import HomePage from "@/features/home/index.page";
 
 export default function Home() {
-  return <Layout>ssssss</Layout>;
+  return <HomePage />;
 }
