@@ -23,17 +23,6 @@
           }
         ]
       }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "jq -r '.tool_input.file_path' | while read -r path; do $(git rev-parse --show-toplevel)/.claude/scripts/run-makers.sh \"$path\"; done"
-          }
-        ]
-      }
     ]
   }
 }
