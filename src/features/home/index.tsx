@@ -1,9 +1,10 @@
+import { Container } from "@mui/material";
 import OngoingTripContent from "./components/ongoingTripContent";
 
 export default function Home() {
   return (
-    <div>
+    <Container sx={{ padding: 0 }}>
       <OngoingTripContent />
-    </div>
+    </Container>
   );
 }

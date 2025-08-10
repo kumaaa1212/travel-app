@@ -19,7 +19,7 @@ export default function Layout(props: LayoutProps) {
       <CssBaseline />
       <Header />
       <Container>
-        <StyledBox>{children}</StyledBox>
+        <StyledBox sx={{ background: " #f9fafb" }}>{children}</StyledBox>
       </Container>
     </>
   );
