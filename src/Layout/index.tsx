@@ -1,6 +1,7 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { Box, styled } from "@mui/material";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,12 +18,19 @@ export default function Layout(props: LayoutProps) {
   });
 
   return (
-    <>
+    <Container
+      sx={{
+        padding: 0,
+        backgroundColor: "#f9fafb",
+        minHeight: "100vh",
+      }}
+    >
       <CssBaseline />
       {header}
       <Container>
-        <StyledBox sx={{ background: " #f9fafb" }}>{children}</StyledBox>
+        <StyledBox>{children}</StyledBox>
       </Container>
-    </>
+      <Footer />
+    </Container>
   );
 }

@@ -58,8 +58,9 @@ export default function OngoingTripContent(props: ItineraryCardProps) {
           <Chip
             label="旅行中"
             size="small"
+            color="secondary"
             sx={{
-              bgcolor: "#1976d2",
+              // bgcolor: "#1976d2",
               color: "#fff",
               fontWeight: 600,
               fontSize: "12px",
@@ -151,7 +152,7 @@ export default function OngoingTripContent(props: ItineraryCardProps) {
                 width: 40,
                 height: 40,
                 borderRadius: "50%",
-                bgcolor: "#4caf50",
+                bgcolor: "#06710a",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
