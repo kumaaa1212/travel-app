@@ -4,7 +4,6 @@ import { Box, Fab, Typography } from "@mui/material";
 import style from "./index.module.scss";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import SearchTextField from "@/ui/SerchTextFiled";
 import AddIcon from "@mui/icons-material/Add";
 import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
 import LocalAirportOutlinedIcon from "@mui/icons-material/LocalAirportOutlined";
@@ -41,6 +40,17 @@ export default function Header() {
             >
               <p className={style.title}>Tripli</p>
               <p className={style.subTitle}>どこへでも、みんなで</p>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                marginTop: 2,
+              }}
+            >
+              <NotificationsNoneOutlinedIcon />
+              <PersonOutlineOutlinedIcon />
             </Box>
           </Box>
           <Box
@@ -90,10 +100,9 @@ export default function Header() {
               <Fab color="secondary" aria-label="add">
                 <AddIcon />
               </Fab>
-              <Typography>旅行を作成</Typography>
+              <Typography>旅行作成</Typography>
             </Box>
           </Box>
-          {/* <SearchTextField placeholder="旅行を検索" /> */}
         </Box>
       </Toolbar>
     </AppBar>

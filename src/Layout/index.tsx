@@ -10,27 +10,27 @@ interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps) {
-  const { children, header, showBottomNavigation = false } = props;
+  const { children, header } = props;
 
   const StyledBox = styled(Box)({
     marginTop: 16,
-    paddingBottom: showBottomNavigation ? 100 : 16,
+    paddingBottom: 90,
   });
 
   return (
-    <Container
+    <Box
       sx={{
-        padding: 0,
         backgroundColor: "#f9fafb",
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <CssBaseline />
       {header}
-      <Container>
+      <Container sx={{ flex: 1, paddingBottom: 0 }}>
         <StyledBox>{children}</StyledBox>
       </Container>
-      <Footer />
-    </Container>
+    </Box>
   );
 }
