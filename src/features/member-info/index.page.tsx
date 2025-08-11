@@ -2,10 +2,10 @@ import Layout from "@/Layout";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 import { Box, CircularProgress } from "@mui/material";
-import Create from ".";
 import CreateHeader from "@/Layout/CreateHeader";
+import MemberInfo from ".";
 
-export default function CreatePage() {
+export default function MemberInfoPage() {
   return (
     <Layout header={<CreateHeader />}>
       <ErrorBoundary fallback={<div>Error</div>}>
@@ -16,7 +16,7 @@ export default function CreatePage() {
             </Box>
           }
         >
-          <Create />
+          <MemberInfo />
         </Suspense>
       </ErrorBoundary>
     </Layout>

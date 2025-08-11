@@ -2,8 +2,10 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Box, Typography } from "@mui/material";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
+import { useRouter } from "next/router";
 
 export default function CreateHeader() {
+  const router = useRouter();
   return (
     <AppBar
       elevation={1}
@@ -21,7 +23,7 @@ export default function CreateHeader() {
             gap: 1,
           }}
         >
-          <WestOutlinedIcon />
+          <WestOutlinedIcon onClick={() => router.back()} />
           <Box
             sx={{
               display: "flex",

@@ -7,8 +7,10 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import AddIcon from "@mui/icons-material/Add";
 import IosShareOutlinedIcon from "@mui/icons-material/IosShareOutlined";
 import LocalAirportOutlinedIcon from "@mui/icons-material/LocalAirportOutlined";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <AppBar
       elevation={1}
@@ -95,6 +97,9 @@ export default function Header() {
                 flexDirection: "column",
                 alignItems: "center",
                 gap: 1,
+              }}
+              onClick={() => {
+                router.push("/create/basic-info");
               }}
             >
               <Fab color="secondary" aria-label="add">

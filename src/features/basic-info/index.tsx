@@ -3,9 +3,11 @@ import TravelCreateStepper from "./components/travelCreateStepper";
 import TravelBasicInfoCard from "./components/travelBasicInfoCard";
 import TravelSummaryCard from "./components/tracelSummaryCard";
 import { Button } from "@mui/material";
+import { useRouter } from "next/router";
 
-export default function Create() {
+export default function BasicInfo() {
   const steps = ["", "", ""];
+  const router = useRouter();
   return (
     <>
       <Box sx={{ width: "100%", marginTop: 1 }}>
@@ -21,6 +23,9 @@ export default function Create() {
               color: "white",
               height: 40,
               borderRadius: 2,
+            }}
+            onClick={() => {
+              router.push("/create/detail-info");
             }}
           >
             次に進む
