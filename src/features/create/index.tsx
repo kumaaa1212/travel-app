@@ -1,20 +1,32 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
+import TravelCreateStepper from "./components/travelCreateStepper";
+import TravelBasicInfoCard from "./components/travelBasicInfoCard";
+import TravelSummaryCard from "./components/tracelSummaryCard";
+import { Button } from "@mui/material";
 
 export default function Create() {
-  const steps = ["基本情報", "詳細情報", "メンバー情報"];
+  const steps = ["", "", ""];
   return (
-    <Box sx={{ width: "100%" }}>
-      <Stepper activeStep={1} alternativeLabel>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-    </Box>
+    <>
+      <Box sx={{ width: "100%", marginTop: 1 }}>
+        <TravelCreateStepper activeStep={1} steps={steps} />
+        <TravelBasicInfoCard />
+        <TravelSummaryCard />
+        <Box sx={{ marginTop: 4 }}>
+          <Button
+            variant="contained"
+            fullWidth
+            sx={{
+              bgcolor: "grey.500",
+              color: "white",
+              height: 40,
+              borderRadius: 2,
+            }}
+          >
+            次に進む
+          </Button>
+        </Box>
+      </Box>
+    </>
   );
 }
