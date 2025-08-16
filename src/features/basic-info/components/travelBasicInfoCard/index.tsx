@@ -12,6 +12,8 @@ import { Dayjs } from "dayjs";
 export default function TravelBasicInfoCard() {
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
+  const [openStartPicker, setOpenStartPicker] = useState(false);
+  const [openEndPicker, setOpenEndPicker] = useState(false);
 
   const handleStartDateChange = (newValue: Dayjs | null) => {
     setStartDate(newValue);
@@ -76,9 +78,40 @@ export default function TravelBasicInfoCard() {
               onChange={handleStartDateChange}
               maxDate={endDate || undefined}
               format="YYYY/MM/DD"
+              open={openStartPicker}
+              onOpen={() => setOpenStartPicker(true)}
+              onClose={() => setOpenStartPicker(false)}
               enableAccessibleFieldDOMStructure={false}
               slots={{
                 textField: TextField,
+              }}
+              slotProps={{
+                textField: {
+                  onClick: () => setOpenStartPicker(true),
+                  onMouseDown: (e: React.MouseEvent) => {
+                    e.preventDefault();
+                    setOpenStartPicker(true);
+                  },
+                  inputProps: {
+                    readOnly: true,
+                    style: {
+                      cursor: "pointer",
+                      caretColor: "transparent",
+                    },
+                  },
+                  sx: {
+                    "& .MuiInputBase-input": {
+                      cursor: "pointer",
+                      userSelect: "none",
+                      WebkitUserSelect: "none",
+                      MozUserSelect: "none",
+                      msUserSelect: "none",
+                      "&::selection": {
+                        backgroundColor: "transparent",
+                      },
+                    },
+                  },
+                },
               }}
             />
           </LocalizationProvider>
@@ -93,9 +126,40 @@ export default function TravelBasicInfoCard() {
               onChange={handleEndDateChange}
               minDate={startDate || undefined}
               format="YYYY/MM/DD"
+              open={openEndPicker}
+              onOpen={() => setOpenEndPicker(true)}
+              onClose={() => setOpenEndPicker(false)}
               enableAccessibleFieldDOMStructure={false}
               slots={{
                 textField: TextField,
+              }}
+              slotProps={{
+                textField: {
+                  onClick: () => setOpenEndPicker(true),
+                  onMouseDown: (e: React.MouseEvent) => {
+                    e.preventDefault();
+                    setOpenEndPicker(true);
+                  },
+                  inputProps: {
+                    readOnly: true,
+                    style: {
+                      cursor: "pointer",
+                      caretColor: "transparent",
+                    },
+                  },
+                  sx: {
+                    "& .MuiInputBase-input": {
+                      cursor: "pointer",
+                      userSelect: "none",
+                      WebkitUserSelect: "none",
+                      MozUserSelect: "none",
+                      msUserSelect: "none",
+                      "&::selection": {
+                        backgroundColor: "transparent",
+                      },
+                    },
+                  },
+                },
               }}
             />
           </LocalizationProvider>
