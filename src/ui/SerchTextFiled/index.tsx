@@ -1,30 +1,57 @@
 import React from "react";
-import { TextField, TextFieldProps, InputAdornment } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import {
+  TextField as MuiTextField,
+  TextFieldProps as MuiTextFieldProps,
+} from "@mui/material";
 
 // TextFieldProps を継承
-export type SearchTextFieldProps = TextFieldProps;
+export type TextFieldProps = MuiTextFieldProps;
 
-export default function SearchTextField(props: SearchTextFieldProps) {
+export default function TextField(props: TextFieldProps) {
   // デフォルトデザイン
-  const defaultProps: TextFieldProps = {
-    variant: "outlined",
-    placeholder: "",
-    size: "small",
-    fullWidth: true,
-    InputProps: {
-      startAdornment: (
-        <InputAdornment position="start">
-          <SearchIcon sx={{ color: "grey.500" }} />
-        </InputAdornment>
-      ),
-      sx: {
-        borderRadius: 5,
-        backgroundColor: "#f9fafb",
+  const defaultSx = {
+    "& .MuiOutlinedInput-root": {
+      borderRadius: 2,
+      backgroundColor: "#f9fafb",
+      "&:hover fieldset": {
+        borderColor: "secondary.main",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "secondary.main",
+        borderWidth: 2,
+      },
+      "& input": {
+        "&::placeholder": {
+          opacity: 0.7,
+        },
       },
     },
   };
 
-  // 渡された props で上書き
-  return <TextField {...defaultProps} {...props} />;
+  // propsのsxとデフォルトのsxをマージ
+  const mergedSx = {
+    ...defaultSx,
+    ...props.sx,
+  };
+
+  // slotPropsをマージ
+  const mergedSlotProps = {
+    ...props.slotProps,
+    input: {
+      ...props.slotProps?.input,
+      ...props.InputProps, // 後方互換性のため
+    },
+  };
+
+  return (
+    <MuiTextField
+      variant="outlined"
+      placeholder=""
+      size="small"
+      fullWidth
+      {...props}
+      sx={mergedSx}
+      slotProps={mergedSlotProps}
+    />
+  );
 }

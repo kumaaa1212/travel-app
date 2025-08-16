@@ -15,7 +15,7 @@ export default function Header() {
     <AppBar
       elevation={1}
       position="static"
-      sx={{ backgroundColor: "#05203c", color: "white" }}
+      sx={{ backgroundColor: "primary.main", color: "white" }}
     >
       <Toolbar>
         <Box

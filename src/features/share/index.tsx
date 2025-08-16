@@ -1,4 +1,6 @@
-import SearchTextField from "@/ui/SerchTextFiled";
+import TextField from "@/ui/SerchTextFiled";
+import { InputAdornment } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import {
   Alert,
   AlertTitle,
@@ -39,23 +41,33 @@ export default function Share() {
   return (
     <>
       <Box sx={{ marginBottom: 2 }}>
-        <SearchTextField />
+        <TextField
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon sx={{ color: "grey.500" }} />
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
       </Box>
       <Alert severity="info">
         <AlertTitle>旅行をシェアしよう</AlertTitle>
         リンクをコピーして友達に送ることで、旅行の詳細や写真を共有できます。
-        <Link 
-          href="/share/tips" 
-          sx={{ 
-            display: "inline-block", 
-            marginTop: 1, 
+        <Link
+          href="/share/tips"
+          sx={{
+            display: "inline-block",
+            marginTop: 1,
             fontSize: "14px",
             color: "#0361e3",
             textDecoration: "underline",
             cursor: "pointer",
             "&:hover": {
               textDecoration: "underline",
-            }
+            },
           }}
         >
           コツを見る

@@ -1,7 +1,7 @@
 import { Paper, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import IconCover from "@/ui/IconCover";
-import SearchTextField from "@/ui/SerchTextFiled";
+import TextField from "@/ui/SerchTextFiled";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
@@ -14,7 +14,6 @@ export default function TravelBasicInfoCard() {
         elevation={3}
         sx={{
           padding: 2,
-          borderRadius: 2,
           display: "flex",
           flexDirection: "column",
           gap: 2,
@@ -41,13 +40,13 @@ export default function TravelBasicInfoCard() {
           <Typography variant="body2" fontWeight="500">
             旅行タイトル
           </Typography>
-          <SearchTextField />
+          <TextField />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2" fontWeight="500">
             旅行タイトル
           </Typography>
-          <SearchTextField />
+          <TextField />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2" fontWeight="400">
