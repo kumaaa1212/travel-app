@@ -1,7 +1,7 @@
 import { Paper, Typography } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import IconCover from "@/ui/IconCover";
-import TextField from "@/ui/SerchTextFiled";
+import TextField from "@/ui/TextFiled";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
