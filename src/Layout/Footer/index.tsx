@@ -13,7 +13,7 @@ export default function Footer() {
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-  
+
   return (
     <Box
       sx={{
@@ -35,7 +35,7 @@ export default function Footer() {
           "& .MuiBottomNavigationAction-root": {
             color: "#757575",
             "&.Mui-selected": {
-              color: "#1976d2",
+              color: "secondary.main",
             },
           },
           "& .MuiBottomNavigationAction-label": {
@@ -46,35 +46,10 @@ export default function Footer() {
           },
         }}
       >
-        <BottomNavigationAction
-          label="一覧"
-          icon={
-            <Box
-              sx={{
-                border: value === 0 ? "2px solid #1976d2" : "2px solid #757575",
-                borderRadius: "8px",
-                padding: "4px 8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <ListAltIcon />
-            </Box>
-          }
-        />
-        <BottomNavigationAction
-          label="旅程"
-          icon={<MapIcon />}
-        />
-        <BottomNavigationAction
-          label="経費"
-          icon={<AttachMoneyIcon />}
-        />
-        <BottomNavigationAction
-          label="写真"
-          icon={<CameraAltIcon />}
-        />
+        <BottomNavigationAction label="一覧" icon={<ListAltIcon />} />
+        <BottomNavigationAction label="旅程" icon={<MapIcon />} />
+        <BottomNavigationAction label="経費" icon={<AttachMoneyIcon />} />
+        <BottomNavigationAction label="写真" icon={<CameraAltIcon />} />
       </BottomNavigation>
     </Box>
   );
