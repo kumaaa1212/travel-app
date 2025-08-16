@@ -76,24 +76,9 @@ export default function TravelBasicInfoCard() {
               onChange={handleStartDateChange}
               maxDate={endDate || undefined}
               format="YYYY/MM/DD"
-              slotProps={{
-                textField: {
-                  fullWidth: true,
-                  size: "small",
-                  sx: {
-                    "& .MuiOutlinedInput-root": {
-                      borderRadius: 2,
-                      backgroundColor: "#f9fafb",
-                      "&:hover fieldset": {
-                        borderColor: "secondary.main",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "secondary.main",
-                        borderWidth: 2,
-                      },
-                    },
-                  },
-                },
+              enableAccessibleFieldDOMStructure={false}
+              slots={{
+                textField: TextField,
               }}
             />
           </LocalizationProvider>
@@ -108,24 +93,9 @@ export default function TravelBasicInfoCard() {
               onChange={handleEndDateChange}
               minDate={startDate || undefined}
               format="YYYY/MM/DD"
-              slotProps={{
-                textField: {
-                  fullWidth: true,
-                  size: "small",
-                  sx: {
-                    "& .MuiOutlinedInput-root": {
-                      borderRadius: 2,
-                      backgroundColor: "#f9fafb",
-                      "&:hover fieldset": {
-                        borderColor: "secondary.main",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "secondary.main",
-                        borderWidth: 2,
-                      },
-                    },
-                  },
-                },
+              enableAccessibleFieldDOMStructure={false}
+              slots={{
+                textField: TextField,
               }}
             />
           </LocalizationProvider>
