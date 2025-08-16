@@ -1,11 +1,18 @@
-import { Box } from "@mui/material";
+import { useRouter } from "next/router";
+import Itinerary from "./itinerary";
+import QuickSetting from "./components/quickSetting";
+import ExpensesList from "./components/ExpensesList";
 
 export default function TravelInfoView() {
+  const router = useRouter();
+
   return (
-    <>
-      <Box>
-        TravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPageTravelInfoViewPage
-      </Box>
-    </>
+    <div>
+      {/* <QuickSetting /> */}
+      <div>
+        {router.query.tab === "itinerary" && <Itinerary />}
+        {router.query.tab === "expenses" && <ExpensesList />}
+      </div>
+    </div>
   );
 }

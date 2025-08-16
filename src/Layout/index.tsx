@@ -7,10 +7,11 @@ interface LayoutProps {
   children: React.ReactNode;
   header?: React.ReactNode;
   showBottomNavigation?: boolean;
+  footer?: React.ReactNode;
 }
 
 export default function Layout(props: LayoutProps) {
-  const { children, header, showBottomNavigation = true } = props;
+  const { children, header, showBottomNavigation = false } = props;
 
   const StyledBox = styled(Box)({
     marginTop: 16,

@@ -18,7 +18,7 @@ export default function DetailInfo() {
           variant="contained"
           fullWidth
           sx={{
-            bgcolor: "grey.500",
+            bgcolor: "primary.main",
             color: "white",
             height: 40,
             borderRadius: 2,

@@ -29,7 +29,7 @@ export default function ViewHeader({ title, subtitle }: PageHeaderProps) {
           }}
         >
           <WestOutlinedIcon
-            onClick={() => router.back()}
+            onClick={() => router.push("/home")}
             sx={{ cursor: "pointer" }}
           />
           <Box
@@ -44,12 +44,6 @@ export default function ViewHeader({ title, subtitle }: PageHeaderProps) {
               {/* {title} */}
               沖縄リゾート旅行
             </Typography>
-            {subtitle && (
-              <Typography sx={{ fontSize: 12, fontWeight: 400, marginTop: 1 }}>
-                {/* {subtitle} */}
-                4月20日 - 4月23日
-              </Typography>
-            )}
           </Box>
           <Box />
         </Box>

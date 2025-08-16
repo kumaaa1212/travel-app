@@ -76,7 +76,7 @@ export default function OngoingTripContent(props: ItineraryCardProps) {
             size="small"
             sx={{ color: "#999" }}
             aria-label="open"
-            onClick={() => router.push("/travel-info")}
+            onClick={() => router.push("/travel-info/1/view?tab=view")}
           >
             <ArrowForwardIosIcon sx={{ fontSize: 16 }} />
           </IconButton>

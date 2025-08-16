@@ -5,21 +5,21 @@ export default function ButtonBase() {
   const router = useRouter();
   return (
     <>
-          <Button
-            variant="contained"
-            fullWidth
-            sx={{
-              bgcolor: "grey.500",
-              color: "white",
-              height: 40,
-              borderRadius: 2,
-            }}
-            onClick={() => {
-              router.push("/create/detail-info");
-            }}
-          >
-            次に進む
-          </Button>
-      </>
-  )
+      <Button
+        variant="contained"
+        fullWidth
+        sx={{
+          bgcolor: "primary.main",
+          color: "white",
+          height: 40,
+          borderRadius: 2,
+        }}
+        onClick={() => {
+          router.push("/create/detail-info");
+        }}
+      >
+        次に進む
+      </Button>
+    </>
+  );
 }

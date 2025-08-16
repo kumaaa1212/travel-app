@@ -6,12 +6,18 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import MapIcon from "@mui/icons-material/Map";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import { useRouter } from "next/router";
 
 export default function Footer() {
   const [value, setValue] = React.useState(0);
+  const router = useRouter();
 
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+  };
+
+  const handleClick = (key: string) => {
+    router.push(`/travel-info/1/view?tab=${key}`);
   };
 
   return (
@@ -46,10 +52,26 @@ export default function Footer() {
           },
         }}
       >
-        <BottomNavigationAction label="一覧" icon={<ListAltIcon />} />
-        <BottomNavigationAction label="旅程" icon={<MapIcon />} />
-        <BottomNavigationAction label="経費" icon={<AttachMoneyIcon />} />
-        <BottomNavigationAction label="写真" icon={<CameraAltIcon />} />
+        <BottomNavigationAction
+          onClick={() => handleClick("view")}
+          label="一覧"
+          icon={<ListAltIcon />}
+        />
+        <BottomNavigationAction
+          onClick={() => handleClick("itinerary")}
+          label="旅程"
+          icon={<MapIcon />}
+        />
+        <BottomNavigationAction
+          onClick={() => handleClick("expenses")}
+          label="経費"
+          icon={<AttachMoneyIcon />}
+        />
+        <BottomNavigationAction
+          onClick={() => handleClick("photos")}
+          label="写真"
+          icon={<CameraAltIcon />}
+        />
       </BottomNavigation>
     </Box>
   );

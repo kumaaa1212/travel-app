@@ -11,6 +11,7 @@ export default function TravelInfoViewPage() {
       header={
         <ViewHeader title="旅行名が入る" subtitle="リンクをコピーしてシェア" />
       }
+      showBottomNavigation
     >
       <ErrorBoundary fallback={<div>Error</div>}>
         <Suspense

@@ -14,7 +14,7 @@ export default function MemberInfo() {
           variant="contained"
           fullWidth
           sx={{
-            bgcolor: "grey.500",
+            bgcolor: "primary.main",
             color: "white",
             height: 40,
             borderRadius: 2,
