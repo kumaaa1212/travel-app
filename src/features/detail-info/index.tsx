@@ -1,9 +1,9 @@
 import { Box, Button } from "@mui/material";
-import TravelSummaryCard from "./components/tracelSummaryCard";
 import TravelBudgetCard from "./components/travelBudgetCard";
 import TravelStatusCard from "./components/travelStatusCard";
 import { useRouter } from "next/router";
 import StepperBase from "../../ui/StepperBase";
+import TravelSummaryCard from "./components/travelSummaryCard";
 
 export default function DetailInfo() {
   const router = useRouter();
