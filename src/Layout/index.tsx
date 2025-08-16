@@ -10,11 +10,11 @@ interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps) {
-  const { children, header } = props;
+  const { children, header, showBottomNavigation = true } = props;
 
   const StyledBox = styled(Box)({
     marginTop: 16,
-    paddingBottom: 90,
+    paddingBottom: showBottomNavigation ? 90 : 16,
   });
 
   return (
@@ -31,6 +31,7 @@ export default function Layout(props: LayoutProps) {
       <Container sx={{ flex: 1, paddingBottom: 0 }}>
         <StyledBox>{children}</StyledBox>
       </Container>
+      {showBottomNavigation && <Footer />}
     </Box>
   );
 }
