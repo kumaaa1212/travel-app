@@ -38,12 +38,14 @@ export default function TravelBudgetCard() {
           </Typography>
           <TextField
             placeholder="50000"
-            InputProps={{
-              startAdornment: (
-                <Typography sx={{ mr: 1, color: "text.secondary" }}>
-                  ¥
-                </Typography>
-              ),
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <Typography sx={{ mr: 1, color: "text.secondary" }}>
+                    ¥
+                  </Typography>
+                ),
+              },
             }}
           />
         </Box>
