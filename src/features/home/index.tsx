@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Container sx={{ padding: 0 }}>
       <OngoingTripContent />
-      <MyTrip />
+      {/* <MyTrip /> */}
       <ModalBase />
     </Container>
   );

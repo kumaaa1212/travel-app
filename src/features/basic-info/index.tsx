@@ -1,17 +1,18 @@
 import Box from "@mui/material/Box";
-import TravelCreateStepper from "./components/travelCreateStepper";
+import StepperBase from "../../ui/StepperBase";
 import TravelBasicInfoCard from "./components/travelBasicInfoCard";
 import TravelSummaryCard from "./components/tracelSummaryCard";
 import { Button } from "@mui/material";
 import { useRouter } from "next/router";
 
 export default function BasicInfo() {
-  const steps = ["", "", ""];
   const router = useRouter();
   return (
     <>
       <Box sx={{ width: "100%", marginTop: 1 }}>
-        <TravelCreateStepper activeStep={1} steps={steps} />
+        <Box sx={{ marginTop: 3 }}>
+        <StepperBase activeStep={0} steps={["基本情報", "詳細情報", "参加者"]} />
+        </Box>
         <TravelBasicInfoCard />
         <TravelSummaryCard />
         <Box sx={{ marginTop: 4 }}>

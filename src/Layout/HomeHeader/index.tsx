@@ -85,6 +85,9 @@ export default function Header() {
                 alignItems: "center",
                 gap: 1,
               }}
+              onClick={() => {
+                router.push("/share");
+              }}
             >
               <Fab color="secondary" aria-label="add">
                 <IosShareOutlinedIcon />

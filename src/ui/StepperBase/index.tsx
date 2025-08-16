@@ -33,15 +33,15 @@ const CustomConnector = styled(StepConnector)(({ theme }) => ({
 
 const CustomStepLabel = styled(StepLabel)(({ theme }) => ({
   "& .MuiStepLabel-label": {
-    color: "#757575",
+    color: "#929292",
     fontSize: "14px",
     fontWeight: 400,
     "&.Mui-active": {
-      color: "#fff",
-      fontWeight: 500,
+      color: "black",
+      fontWeight: 600,
     },
     "&.Mui-completed": {
-      color: "#fff",
+      color: "#929292",
       fontWeight: 500,
     },
   },
@@ -68,10 +68,12 @@ interface CustomStepperProps {
   steps: string[];
 }
 
-const TravelCreateStepper: React.FC<CustomStepperProps> = ({
+const StepperBase: React.FC<CustomStepperProps> = ({
   activeStep,
   steps,
 }): React.JSX.Element => {
+
+  
   return (
     <Box sx={{ width: "100%" }}>
       <Stepper
@@ -79,7 +81,7 @@ const TravelCreateStepper: React.FC<CustomStepperProps> = ({
         alternativeLabel
         connector={<CustomConnector />}
       >
-        {steps.map((label, index) => (
+        {steps.map((label) => (
           <Step key={label}>
             <CustomStepLabel>{label}</CustomStepLabel>
           </Step>
@@ -89,4 +91,4 @@ const TravelCreateStepper: React.FC<CustomStepperProps> = ({
   );
 };
 
-export default TravelCreateStepper;
+export default StepperBase;

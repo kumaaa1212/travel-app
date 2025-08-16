@@ -3,11 +3,13 @@ import TravelSummaryCard from "./components/tracelSummaryCard";
 import TravelBudgetCard from "./components/travelBudgetCard";
 import TravelStatusCard from "./components/travelStatusCard";
 import { useRouter } from "next/router";
+import StepperBase from "../../ui/StepperBase";
 
 export default function DetailInfo() {
   const router = useRouter();
   return (
     <>
+      <StepperBase activeStep={1} steps={["基本情報", "詳細情報", "参加者"]} />
       <TravelBudgetCard />
       <TravelStatusCard />
       <TravelSummaryCard />
