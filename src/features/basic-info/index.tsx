@@ -11,7 +11,10 @@ export default function BasicInfo() {
     <>
       <Box sx={{ width: "100%", marginTop: 1 }}>
         <Box sx={{ marginTop: 3 }}>
-        <StepperBase activeStep={0} steps={["基本情報", "詳細情報", "参加者"]} />
+          <StepperBase
+            activeStep={0}
+            steps={["基本情報", "詳細設定", "参加者"]}
+          />
         </Box>
         <TravelBasicInfoCard />
         <TravelSummaryCard />

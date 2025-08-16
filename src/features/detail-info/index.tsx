@@ -9,7 +9,7 @@ export default function DetailInfo() {
   const router = useRouter();
   return (
     <>
-      <StepperBase activeStep={1} steps={["基本情報", "詳細情報", "参加者"]} />
+      <StepperBase activeStep={1} steps={["基本情報", "詳細設定", "参加者"]} />
       <TravelBudgetCard />
       <TravelStatusCard />
       <TravelSummaryCard />
