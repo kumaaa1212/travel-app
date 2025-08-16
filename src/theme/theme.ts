@@ -9,12 +9,9 @@ const theme = createTheme({
     secondary: {
       main: "#0361e3", //青っぽい色
     },
-    // info: {
-    //   main: "#0361e3",
-    //   light: "#e1ecfd",
-    //   dark: "#024aa2",
-    //   contrastText: "#fff",
-    // },
+    info: {
+      main: "#06710a", //緑
+    },
     grey: {
       500: "#05203c",
     },

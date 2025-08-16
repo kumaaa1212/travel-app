@@ -64,7 +64,7 @@ export default function TravelBasicInfoCard() {
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2" fontWeight="500">
-            旅行タイトル
+            目的地
           </Typography>
           <TextField />
         </Box>
@@ -168,11 +168,7 @@ export default function TravelBasicInfoCard() {
           <Typography variant="body2" fontWeight="500">
             説明（任意）
           </Typography>
-          <TextField
-            multiline
-            rows={4}
-            placeholder="この旅行について..."
-          />
+          <TextField multiline rows={4} placeholder="この旅行について..." />
         </Box>
         <Box sx={{ marginTop: 3 }}></Box>
       </Paper>

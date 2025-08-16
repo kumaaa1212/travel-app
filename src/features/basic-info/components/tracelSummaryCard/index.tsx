@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Box, Link } from "@mui/material";
+import { Paper, Typography, Box, Link, Chip } from "@mui/material";
 import IconCover from "@/ui/IconCover";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 
@@ -11,7 +11,7 @@ interface TravelSummaryItem {
 export default function TravelSummaryCard() {
   const summaryItems: TravelSummaryItem[] = [
     {
-      label: "タイトル",
+      label: "旅行タイトル",
       value:
         "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
     },
@@ -27,7 +27,7 @@ export default function TravelSummaryCard() {
           underline="always"
           sx={{ color: "primary.main", fontSize: "14px" }}
         >
-          計画中
+          <Chip label="計画中" color="info" />
         </Link>
       ),
     },
