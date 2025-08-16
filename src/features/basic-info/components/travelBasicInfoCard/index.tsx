@@ -164,6 +164,16 @@ export default function TravelBasicInfoCard() {
             />
           </LocalizationProvider>
         </Box>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          <Typography variant="body2" fontWeight="500">
+            説明（任意）
+          </Typography>
+          <TextField
+            multiline
+            rows={4}
+            placeholder="この旅行について..."
+          />
+        </Box>
         <Box sx={{ marginTop: 3 }}></Box>
       </Paper>
     </Box>
