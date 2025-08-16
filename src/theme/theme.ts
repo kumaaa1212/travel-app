@@ -9,7 +9,7 @@ const theme = createTheme({
     secondary: {
       main: "#0361e3", //青っぽい色
     },
-    info: {
+    success: {
       main: "#06710a", //緑
     },
     grey: {

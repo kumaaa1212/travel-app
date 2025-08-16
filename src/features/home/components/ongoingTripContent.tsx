@@ -12,6 +12,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { useRouter } from "next/router";
 
 export interface ItineraryCardProps {
   tripTitle?: string;
@@ -37,6 +38,8 @@ export default function OngoingTripContent(props: ItineraryCardProps) {
     scheduleTitle = "清水寺観光",
     scheduleTime = "14:00",
   } = props;
+
+  const router = useRouter();
 
   return (
     <Card
@@ -69,7 +72,12 @@ export default function OngoingTripContent(props: ItineraryCardProps) {
             }}
           />
 
-          <IconButton size="small" sx={{ color: "#999" }} aria-label="open">
+          <IconButton
+            size="small"
+            sx={{ color: "#999" }}
+            aria-label="open"
+            onClick={() => router.push("/travel-info")}
+          >
             <ArrowForwardIosIcon sx={{ fontSize: 16 }} />
           </IconButton>
         </Stack>

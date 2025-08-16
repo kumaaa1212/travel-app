@@ -1,5 +1,5 @@
-import ShareTips from "@/features/share/tips";
+import ShareTipsPage from "@/features/share/tips/index.page";
 
-export default function ShareTipsPage() {
-  return <ShareTips />;
+export default function ShareTips() {
+  return <ShareTipsPage />;
 }

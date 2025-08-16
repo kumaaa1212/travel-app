@@ -1,13 +1,17 @@
 import Layout from "@/Layout";
-import DetailInfo from ".";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 import { Box, CircularProgress } from "@mui/material";
 import PageHeader from "@/Layout/PageHeader";
+import ShareTips from ".";
 
-export default function DetailInfoPage() {
+export default function ShareTipsPage() {
   return (
-    <Layout header={<PageHeader title="新しい旅行を作成" subtitle="ステップ2/3" />}>
+    <Layout
+      header={
+        <PageHeader title="旅行を共有" subtitle="リンクをコピーしてシェア" />
+      }
+    >
       <ErrorBoundary fallback={<div>Error</div>}>
         <Suspense
           fallback={
@@ -16,7 +20,7 @@ export default function DetailInfoPage() {
             </Box>
           }
         >
-          <DetailInfo />
+          <ShareTips />
         </Suspense>
       </ErrorBoundary>
     </Layout>

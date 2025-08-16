@@ -2,12 +2,12 @@ import Layout from "@/Layout";
 import { ErrorBoundary } from "react-error-boundary";
 import { Suspense } from "react";
 import { Box, CircularProgress } from "@mui/material";
-import ShareHeader from "@/Layout/ShareHeader";
+import PageHeader from "@/Layout/PageHeader";
 import Share from ".";
 
 export default function SharePage() {
   return (
-    <Layout header={<ShareHeader />}>
+    <Layout header={<PageHeader title="旅行を共有" subtitle="リンクをコピーしてシェア" />}>
       <ErrorBoundary fallback={<div>Error</div>}>
         <Suspense
           fallback={

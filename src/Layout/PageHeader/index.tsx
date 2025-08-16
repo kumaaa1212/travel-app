@@ -4,7 +4,12 @@ import { Box, Typography } from "@mui/material";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import { useRouter } from "next/router";
 
-export default function CreateHeader() {
+interface PageHeaderProps {
+  title: string;
+  subtitle?: string;
+}
+
+export default function PageHeader({ title, subtitle }: PageHeaderProps) {
   const router = useRouter();
   return (
     <AppBar
@@ -23,7 +28,10 @@ export default function CreateHeader() {
             gap: 1,
           }}
         >
-          <WestOutlinedIcon onClick={() => router.back()} />
+          <WestOutlinedIcon
+            onClick={() => router.back()}
+            sx={{ cursor: "pointer" }}
+          />
           <Box
             sx={{
               display: "flex",
@@ -33,11 +41,13 @@ export default function CreateHeader() {
             }}
           >
             <Typography sx={{ fontSize: 16, fontWeight: 600 }}>
-              新しい旅行を作成
+              {title}
             </Typography>
-            <Typography sx={{ fontSize: 12, fontWeight: 400, marginTop: 1 }}>
-              ステップ1/3
-            </Typography>
+            {subtitle && (
+              <Typography sx={{ fontSize: 12, fontWeight: 400, marginTop: 1 }}>
+                {subtitle}
+              </Typography>
+            )}
           </Box>
           <Box />
         </Box>
