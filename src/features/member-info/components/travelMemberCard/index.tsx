@@ -4,7 +4,7 @@ import IconCover from "@/ui/IconCover";
 import TextField from "@/ui/TextFiled";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
-import GroupIcon from "@mui/icons-material/Group";
+import CalendarTodayIcon from "@mui/icons-material/Group";
 
 export default function TravelMemberCard() {
   const [memberInput, setMemberInput] = useState("");
@@ -41,8 +41,8 @@ export default function TravelMemberCard() {
     <Paper elevation={3} sx={{ padding: 3, borderRadius: 2, marginTop: 3 }}>
       <Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <IconCover backgroundColor="#7800e8">
-            <GroupIcon sx={{ fontSize: 20, color: "#d2bae8" }} />
+          <IconCover backgroundColor="#9c27b0">
+            <CalendarTodayIcon sx={{ fontSize: 20, color: "#f3e5f5" }} />
           </IconCover>
           <Typography variant="body1" fontWeight="800">
             メンバー

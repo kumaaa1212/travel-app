@@ -32,7 +32,7 @@ export default function Layout(props: LayoutProps) {
       <Container sx={{ flex: 1, paddingBottom: 0 }}>
         <StyledBox>{children}</StyledBox>
       </Container>
-      {showBottomNavigation && <Footer />}
+      {showBottomNavigation ? <Footer /> : <Box sx={{ height: 50 }}></Box>}
     </Box>
   );
 }
