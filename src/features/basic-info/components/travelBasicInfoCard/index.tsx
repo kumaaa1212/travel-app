@@ -1,5 +1,5 @@
 import { Paper, Typography } from "@mui/material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CalendarTodayIcon from "@mui/icons-material/LocationOn";
 import IconCover from "@/ui/IconCover";
 import TextField from "@/ui/TextFiled";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -41,8 +41,8 @@ export default function TravelBasicInfoCard() {
       >
         <Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <IconCover backgroundColor="#06710a">
-              <LocationOnIcon sx={{ fontSize: 20, color: "#ceedd0" }} />
+            <IconCover backgroundColor="#9c27b0">
+              <CalendarTodayIcon sx={{ fontSize: 20, color: "#f3e5f5" }} />
             </IconCover>
             <Typography variant="body1" fontWeight="800">
               基本情報
@@ -60,19 +60,19 @@ export default function TravelBasicInfoCard() {
           <Typography variant="body2" fontWeight="500">
             旅行タイトル
           </Typography>
-          <TextField />
+          <TextField placeholder="例）沖縄リゾート旅行" />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2" fontWeight="500">
             目的地
           </Typography>
-          <TextField />
+          <TextField placeholder="例）沖縄" />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Typography variant="body2" fontWeight="500">
             開始日
           </Typography>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ja">
             <DatePicker
               value={startDate}
               onChange={handleStartDateChange}
@@ -120,7 +120,7 @@ export default function TravelBasicInfoCard() {
           <Typography variant="body2" fontWeight="500">
             終了日
           </Typography>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ja">
             <DatePicker
               value={endDate}
               onChange={handleEndDateChange}

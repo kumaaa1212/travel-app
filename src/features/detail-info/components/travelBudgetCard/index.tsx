@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Paper, Typography, Box } from "@mui/material";
 import IconCover from "@/ui/IconCover";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import TextField from "@/ui/TextFiled";
+import StatusButton from "@/ui/StatusButton";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 export default function TravelBudgetCard() {
+  const [travelStatus, setTravelStatus] = useState<
+    "計画中" | "旅行中" | "完了"
+  >("計画中");
+
   return (
     <Paper elevation={3} sx={{ padding: 2, borderRadius: 2, marginTop: 3 }}>
       <Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <IconCover backgroundColor="#188139">
-            <AttachMoneyIcon sx={{ fontSize: 20, color: "#cbd7cf" }} />
+          <IconCover backgroundColor="#9c27b0">
+            <CalendarTodayIcon sx={{ fontSize: 20, color: "#f3e5f5" }} />
           </IconCover>
           <Typography variant="body1" fontWeight="800">
-            予算設定
+            詳細設定
           </Typography>
         </Box>
         <Typography
@@ -48,6 +53,32 @@ export default function TravelBudgetCard() {
               },
             }}
           />
+          <Typography variant="body2" fontWeight="500">
+            旅行ステータス
+          </Typography>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <StatusButton
+              selected={travelStatus === "計画中"}
+              variant="secondary"
+              onClick={() => setTravelStatus("計画中")}
+            >
+              計画中
+            </StatusButton>
+            <StatusButton
+              selected={travelStatus === "旅行中"}
+              variant="success"
+              onClick={() => setTravelStatus("旅行中")}
+            >
+              旅行中
+            </StatusButton>
+            <StatusButton
+              selected={travelStatus === "完了"}
+              variant="grey"
+              onClick={() => setTravelStatus("完了")}
+            >
+              完了
+            </StatusButton>
+          </Box>
         </Box>
       </Box>
     </Paper>

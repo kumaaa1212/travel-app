@@ -11,14 +11,14 @@ export default function DetailInfo() {
     <>
       <StepperBase activeStep={1} steps={["基本情報", "詳細設定", "参加者"]} />
       <TravelBudgetCard />
-      <TravelStatusCard />
+      {/* <TravelStatusCard /> */}
       <TravelSummaryCard />
       <Box sx={{ marginTop: 4 }}>
         <Button
           variant="contained"
           fullWidth
           sx={{
-            bgcolor: "grey.500",
+            bgcolor: "primary.main",
             color: "white",
             height: 40,
             borderRadius: 2,

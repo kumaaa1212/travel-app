@@ -12,7 +12,7 @@ export default function TextField(props: TextFieldProps) {
   const defaultSx = {
     "& .MuiOutlinedInput-root": {
       borderRadius: 2,
-      backgroundColor: "#f9fafb",
+      backgroundColor: "#fdfdfd",
       "&:hover fieldset": {
         borderColor: "secondary.main",
       },
