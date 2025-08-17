@@ -415,10 +415,7 @@ const ExpensesList: React.FC = () => {
 
       <Stack spacing={0.75} sx={{ px: 1 }}>
         {expenses.map((expense) => (
-          <Card
-            key={expense.id}
-            sx={{ borderRadius: 1, boxShadow: 0, border: "1px solid #E0E0E0" }}
-          >
+          <Card key={expense.id}>
             <CardActionArea onClick={() => handleCardClick(expense)}>
               <CardContent
                 sx={{ px: 1.5, py: 0.75, "&:last-child": { pb: 0.75 } }}
